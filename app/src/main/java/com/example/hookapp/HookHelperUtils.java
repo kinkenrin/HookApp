@@ -85,9 +85,9 @@ public class HookHelperUtils {
                 new Class<?>[]{classInterface}, new AMNInvocationHanlder(mInstance));
 
         Reflex.setFieldObject("android.util.Singleton", gDefault, "mInstance", proxy);
-    }*/
+    }
 
-    /*public static void hookAmnAndroidP2() throws ClassNotFoundException {
+    public static void hookAmnAndroidP2() throws ClassNotFoundException {
         Object gDefault = Reflex.getStaticFieldObject("android.app.ActivityManager", "IActivityManagerSingleton");
         Object mInstance = Reflex.getFieldObject("android.util.Singleton", gDefault, "mInstance");
 
@@ -99,7 +99,6 @@ public class HookHelperUtils {
     }*/
 
     public static class AMNInvocationHanlder implements InvocationHandler {
-
 
         private String actionName = "startActivity";
 
@@ -123,7 +122,6 @@ public class HookHelperUtils {
     }
 
     public static class AMNInvocationHanlder1 implements InvocationHandler {
-
 
         private String actionName = "startActivity";
 
